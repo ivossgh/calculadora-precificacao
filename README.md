@@ -19,7 +19,7 @@
 
 ## Visão Geral
 
-O **Sistema de Precificação e Comissão SST** é uma aplicação web desenvolvida para simular o fluxo comercial de uma empresa do setor de Saúde e Segurança do Trabalho. O sistema permite:
+O **Sistema de Precificação e Comissão SST** é uma aplicação web desenvolvida para simular o fluxo comercial de empresa que trabalho atualmente do setor de Saúde e Segurança do Trabalho. O sistema permite:
 
 - Cadastrar empresas clientes com segmento (construção, indústria, comércio)
 - Cadastrar serviços de SST (treinamentos NR, laudos, PCMSO, exames ocupacionais, consultoria)
