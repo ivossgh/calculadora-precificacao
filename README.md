@@ -38,7 +38,6 @@ O domínio foi escolhido por refletir a realidade do setor comercial de empresas
 | Linguagem | Java 17 |
 | Framework | Spring Boot 3.2 |
 | ORM | Hibernate via Spring Data JPA |
-| Banco (dev) | H2 (em memória) |
 | Banco (prod) | PostgreSQL |
 | Frontend | HTML + CSS + JavaScript puro |
 | Testes | JUnit 5 + Mockito |
@@ -182,21 +181,12 @@ cd calculadora-precificacao
 
 A aplicação sobe em `http://localhost:8080`. O banco H2 é criado automaticamente em memória — nenhuma instalação adicional necessária.
 
-Para acessar o console do banco em desenvolvimento:
-```
-http://localhost:8080/h2-console
-JDBC URL: jdbc:h2:mem:testdb
-```
-
 ---
 
 ## Decisões de Design
 
 **Por que Spring Boot?**
 A vaga alvo exige experiência com Spring. Usar Spring Boot desde o primeiro projeto garante que as tecnologias do portfólio estejam alinhadas com o que o mercado pede.
-
-**Por que H2 em desenvolvimento?**
-Elimina a necessidade de instalar e configurar um banco local. O foco fica no aprendizado de JPA e Hibernate, não em infraestrutura. A troca para PostgreSQL em produção exige apenas alterar o `application.properties`.
 
 **Por que UUID como chave primária?**
 UUIDs são a prática adotada em sistemas empresariais modernos por não exporem sequência numérica, facilitarem a integração entre sistemas e serem mais seguros em APIs públicas.
@@ -213,7 +203,7 @@ O relacionamento entre `Venda` e `Servico` é muitos-para-muitos com dados próp
 
 Este projeto faz parte de um portfólio estruturado para transição de carreira para Engenharia de Software, com foco em vagas Java Júnior no segmento de ERP (TOTVS e similares).
 
-O domínio de SST foi escolhido por ser o setor de atuação profissional atual do desenvolvedor, o que garante autenticidade nas regras de negócio e profundidade nas decisões de modelagem — diferenciando o projeto de soluções genéricas como to-do lists ou e-commerces fictícios.
+O domínio de SST foi escolhido por ser o meu setor de atuação atual, o que garante autenticidade nas regras de negócio e profundidade nas decisões de modelagem — diferenciando o projeto de soluções genéricas como to-do lists ou e-commerces fictícios.
 
 O portfólio segue uma progressão planejada de complexidade:
 
