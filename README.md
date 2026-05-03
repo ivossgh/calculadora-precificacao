@@ -210,7 +210,7 @@ O portfólio segue uma progressão planejada de complexidade:
 | # | Projeto | Status |
 |---|---|---|
 | 1 | Calculadora de Precificação e Comissão | 🔧 Em andamento |
-| 2 | Gerenciamento de Pedidos | 📋 Backlog |
+| 2 | Sistema de Onboard de novo colaborador | 📋 Backlog |
 | 3 | CRM com Pipeline de Vendas | 📋 Backlog |
 | 4 | API de Análise de Campanhas | 📋 Backlog |
 | 5 | Sistema de Metas e OKRs | 📋 Backlog |
