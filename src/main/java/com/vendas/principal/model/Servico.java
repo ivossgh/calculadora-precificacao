@@ -4,8 +4,11 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import com.vendas.principal.model.enums.Categoria;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,8 +26,9 @@ public class Servico implements Serializable {
     @Column(nullable = false)
     private String nome;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String categoriaServico;
+    private Categoria categoriaServico;
 
     @Column(nullable = false)
     private BigDecimal valorBase;
@@ -46,11 +50,11 @@ public class Servico implements Serializable {
         this.nome = nome;
     }
 
-    public String getCategoriaServico() {
+    public Categoria getCategoriaServico() {
         return categoriaServico;
     }
 
-    public void setCategoriaServico(String categoriaServico) {
+    public void setCategoriaServico(Categoria categoriaServico) {
         this.categoriaServico = categoriaServico;
     }
 

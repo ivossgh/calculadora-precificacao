@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Serviço</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <div class="card p-4 shadow-sm">
+        <h2>Cadastrar Serviço</h2>
+
+        <form method="POST" th:action="@{/cadastrar-servico}">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Do Serviço</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="PGR (Prog. Gerenciamento de Riscos)" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="categoriaServico" class="form-label">Selecione a Categoria do Serviço</label>
+                <select class="form-select" id="categoriaServico" name="categoriaServico" required>
+                    <option value="">Selecione a Categoria</option>
+                    <option th:each="s: ${T(com.vendas.principal.model.enums.Categoria).values()}"
+                            th:value="${s}"
+                            th:text="${s.descricao}">
+                    </option>
+                </select>     
+            </div>
+
+            <div class="mb-3">
+                <label for="valorBase" class="form-label">Adicione o Valor do Serviço</label>
+                <!--Isso evita: valores negativos problemas com casas decimais-->
+                <input type="number" class="form-control" id="valorBase" name="valorBase" step="0.01" min="0" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+        </form>
+    </div>
+    
+</body>
+</html>

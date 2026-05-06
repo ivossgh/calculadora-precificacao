@@ -33,6 +33,7 @@ public class EmpresaController {
 
     @GetMapping("/lista-empresas")
     public String listarEmpresas(Model model){
+        //SELECT * FROM empresas;
         model.addAttribute("empresas", empresaRepository.findAll());
         return "listaEmpresas";
     }

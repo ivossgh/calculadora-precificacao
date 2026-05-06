@@ -40,7 +40,7 @@ public class ItemVenda implements Serializable {
 
     @Column(nullable = false)
     private BigDecimal valorTotal;
-
+    
   
     public UUID getId() {
         return id;

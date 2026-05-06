@@ -1,15 +1,15 @@
 package com.vendas.principal.model.enums;
 
 public enum Setor {
+
     INDUSTRIA("Indústria"),
     CONSTRUCAO("Construção"),
     COMERCIO("Comércio"),
-    SERVICOS("Serviços"),
-    SAUDE("Saúde"); // Sintaxe corrigida: apenas o valor entre aspas
+    SERVICOS("Serviços");
+    
 
     private final String descricao;
 
-    // Construtor deve vir após as constantes
     Setor(String descricao) {
         this.descricao = descricao;
     }
@@ -17,4 +17,4 @@ public enum Setor {
     public String getDescricao() {
         return descricao;
     }
-}   
+}
